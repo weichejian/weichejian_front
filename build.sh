@@ -1,3 +1,3 @@
-sudo npm install -g yo grunt-cli bower
-sudo npm install -g generator-angular
+npm install -g yo grunt-cli bower
+npm install -g generator-angular
 yo angular

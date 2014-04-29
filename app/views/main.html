@@ -2,7 +2,10 @@
   <div class="row-fluid">
     <div class="span2">
       <!--Sidebar content-->
-
+      qty:<input type="integer" min="0" ng-model="qty" required >
+      cost:<input type="number" ng-model="cost" required >
+      Total: {{qty * cost | currency}}
+      cost:<span ng-bind="cost"></span>
       Search: <input ng-model="query">
       Sort by:
       <select ng-model="orderProp">
@@ -11,14 +14,20 @@
       </select>
 
     </div>
+    <hr/>
+    <div>
+      Date format: <input ng-model="format">
+       <hr/>
+      Current time is: <span my-current-time="format"></span>
+      <hr/>
+    </div>
     <div class="span10">
       <!--Body content-->
-
       <ul class="phones">
         <li ng-repeat="phone in phones | filter:query | orderBy:orderProp" class="thumbnail">
           <a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}"></a>
           <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
-          <p>{{phone.snippet}}</p>
+          <p dragable>{{phone.snippet}}</p>
         </li>
       </ul>
 

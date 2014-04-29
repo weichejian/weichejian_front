@@ -5,4 +5,7 @@ angular.module('weichejianFrontApp')
     $http.get('phones/' + $routeParams.phoneId + '.json').success(function(data) {
        $scope.phone = data;
      });
+    $scope.setImage = function(imageUrl) {
+        $scope.mainImageUrl = imageUrl;
+      }
   });

@@ -32,11 +32,7 @@ body {
 }
 
 /* Customize container */
-@media (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-}
+
 .container-narrow > hr {
   margin: 30px 0;
 }
@@ -76,4 +72,141 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+/* -------------Customer My Style Over Write Bootstrap-----------*/
+.navbar {
+  background: #fff;
+  padding-left: 0;
+  border-radius: 0;
+  margin: 0;
+  padding: 30px 0
+}
+.navbar .navbar-brand {
+  padding: 0;
+  float: left;
+  margin: 0;
+  max-width: none
+}
+.navbar .container {
+  position: relative
+}
+.navbar a {
+  color: #555;
+  font-size: 15px;
+  font-weight: 600;
+}
+.navbar .nav {
+  margin-left: 40px;
+  margin-top: 5px;
+  position: absolute;
+  right: 0
+}
+.navbar .nav>li {
+  float: left;
+  list-style: none
+}
+.navbar .nav>li a {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  margin: 0 15px;
+  display: inline-block
+}
+.navbar .nav>li a:hover, .navbar .nav>li a:focus{
+  color: #000;
+}
+.navbar .nav>li.active a{
+  border-bottom:2px solid #000;
+}
+.navbar .nav>li.sep {
+  border-left: 1px solid #ddd;
+  width: 1px;
+  margin: 14px 20px;
+  height: 16px
+}
+.navbar .signup .btn {
+  margin-left: 30px;
+  padding: 11px 22px;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 2px;
+  background: #0a9268;
+  color: #fff;
+  line-height: 1
+}
+.navbar .signup .btn:hover {
+  background: #087a57;
+  color: #fff
+}
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus{
+  color: #000;
+  background: transparent;
+}
+
+.homepage-banner {
+  background: url(../images/header-bg.jpg) 100% 65% no-repeat;
+  background-size: cover;
+  z-index: 1;
+  opacity: .8
+}
+
+
+body footer {
+  border: 0
+}
+
+body header {
+  background: #000;
+  height: 440px;
+  text-align: center;
+  color: #fff;
+  padding: 100px 0 0;
+  position: relative
+}
+
+
+body header h3 {
+  color: #0a9268;
+  margin: 0;
+  padding: 20px 30px 15px;
+  margin: 0;
+  border-bottom: 1px solid #eee
+}
+body header .text {
+  margin: 60px 0 0 20px
+}
+
+body header p {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 1.5em
+}
+body header h1 {
+  font-size: 4.2rem;
+  font-weight: 600;
+  margin-bottom: .2em;
+  margin-top: .2em
+}
+
+footer {
+  padding: 50px 0;
+  color: #777;
+  border-top: 1px solid #ddd
+}
+footer a, footer span {
+  color: #777;
+  display: inline-block
+}
+footer .col-lg-10 a {
+  margin: 10px 15px;
+  font-size: 15px
+}
+footer .col-lg-10 img {
+  margin-right: 25px
+}
+footer span {
+  margin: 10px 0
+}
+footer .mixpanel a {
+  margin: 10px 0
 }

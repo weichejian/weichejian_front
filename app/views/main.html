@@ -1,36 +1,11 @@
-<div class="container-fluid">
-  <div class="row-fluid">
-    <div class="span2">
-      <!--Sidebar content-->
-      qty:<input type="integer" min="0" ng-model="qty" required >
-      cost:<input type="number" ng-model="cost" required >
-      Total: {{qty * cost | currency}}
-      cost:<span ng-bind="cost"></span>
-      Search: <input ng-model="query">
-      Sort by:
-      <select ng-model="orderProp">
-        <option value="name">Alphabetical</option>
-        <option value="age">Newest</option>
-      </select>
+ <header class="homepage-banner">
+    <div class="container">
+        <div class="col col-xs-5 col-md-offset-1">
+            <div class="text">
+                <h1>微车间</h1>
+                <p>创新 专注</p>
+            </div>
+        </div>
 
     </div>
-    <hr/>
-    <div>
-      Date format: <input ng-model="format">
-       <hr/>
-      Current time is: <span my-current-time="format"></span>
-      <hr/>
-    </div>
-    <div class="span10">
-      <!--Body content-->
-      <ul class="phones">
-        <li ng-repeat="phone in phones | filter:query | orderBy:orderProp" class="thumbnail">
-          <a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}"></a>
-          <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
-          <p dragable>{{phone.snippet}}</p>
-        </li>
-      </ul>
-
-    </div>
-  </div>
-</div>
+</header>

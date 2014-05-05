@@ -25,12 +25,11 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <nav ng-include="'views/mainHeader.html'" class="navbar navbar-inverse navbar-fixed-top"></nav>
 
 
-    <div class="container" ng-view=""></div>
+    <div ui-view class="container">
+    </div>
 
-    <footer ng-include="'views/mainFooter.html'"></footer>
 
 
 
@@ -42,19 +41,39 @@
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/detail.js"></script>
+
+      <!-- common -->
+      <script src="scripts/config/env.js"></script>
+      <script src="scripts/config/domain.js"></script>
+      <script src="scripts/config/config.js"></script>
+
+      <!-- app -->
+      <script src="scripts/app.js"></script>
+      <script src="scripts/states.js"></script>
+      <!-- services -->
+      <script src="scripts/services/auth.js"></script>
+      <script src="scripts/services/storage.js"></script>
+      <script src="scripts/services/storageExt.js"></script>
+      <!-- controllers -->
+      <script src="scripts/controllers/main.js"></script>
+      <script src="scripts/controllers/detail.js"></script>
+      <!-- directives -->
+
         <!-- endbuild -->
 </body>
 </html>

@@ -5,6 +5,7 @@ angular.module('weichejian.controllers')
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
+      'ui.router',
       'Karma'
     ];
 

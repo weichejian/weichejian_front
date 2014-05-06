@@ -7,26 +7,14 @@ angular.module('weichejian.states').config([
       url: '/',
       templateUrl: 'views/main.html',
       controller: 'MainCtrl'
-    }).state('signin', {
-      url: '/signin',
-      templateUrl: 'views/signin.html',
-      controller: 'SignInCtrl'
+    }).state('login', {
+      url: '/login',
+      templateUrl: 'views/login.html',
+      controller: 'LoginCtrl'
     }).state('main', {
       url: '/main',
       templateUrl: 'views/main.html',
-      controller: 'MainCtrl',
-      resolve: {
-        customers: [
-          'Customer', function(Customer) {
-            return Customer.fetch();
-          }
-        ],
-        unreads: [
-          'Unread', function(Unread) {
-            return Unread.fetch();
-          }
-        ]
-      }
+      controller: 'MainCtrl'
     });
   }
 ]);

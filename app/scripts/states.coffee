@@ -15,21 +15,14 @@ angular.module('weichejian.states')
           templateUrl: 'views/main.html'
           controller: 'MainCtrl'
 
-        .state 'signin',
-          url: '/signin'
-          templateUrl: 'views/signin.html'
-          controller: 'SignInCtrl'
+        .state 'login',
+          url: '/login'
+          templateUrl: 'views/login.html'
+          controller: 'LoginCtrl'
 
         .state 'main',
           url: '/main'
           templateUrl: 'views/main.html'
           controller: 'MainCtrl'
-          resolve:
-            customers: ['Customer', (Customer) ->
-              Customer.fetch()
-            ]
-            unreads: ['Unread', (Unread) ->
-              Unread.fetch()
-            ]
     ]
 

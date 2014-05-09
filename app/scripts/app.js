@@ -6,7 +6,9 @@ if (String.prototype.trim == null) {
   };
 }
 
-angular.module('weichejianFrontApp', ['ngCookies', 'ngSanitize', 'ngAnimate', 'ngResource', 'ui.router', 'common.config', 'weichejian.services', 'weichejian.controllers', 'weichejian.states']);
+angular.module('weichejianFrontApp', ['ngCookies', 'ngSanitize', 'ngAnimate', 'ngResource', 'ui.router', 'pascalprecht.translate', 'common.config', 'weichejian.locales', 'weichejian.services', 'weichejian.controllers', 'weichejian.states']);
+
+angular.module('weichejian.locales', []);
 
 angular.module('weichejian.services', []);
 

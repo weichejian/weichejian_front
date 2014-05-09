@@ -11,18 +11,22 @@ angular.module 'weichejianFrontApp',
     'ngAnimate'
     'ngResource'
     'ui.router'
+    'pascalprecht.translate'
+
 
     'common.config'
 
 
+    'weichejian.locales'
     'weichejian.services'
     'weichejian.controllers'
     'weichejian.states'
+
   ]
 
+angular.module 'weichejian.locales', []
 angular.module 'weichejian.services', []
 angular.module 'weichejian.controllers', []
-
 angular.module 'weichejian.states', []
 
 angular.module('weichejianFrontApp')

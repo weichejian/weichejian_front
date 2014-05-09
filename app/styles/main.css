@@ -2,6 +2,7 @@
 body {
   padding-top: 20px;
   padding-bottom: 20px;
+  background: #eaedf1;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -209,4 +210,75 @@ footer span {
 }
 footer .mixpanel a {
   margin: 10px 0
+}
+
+
+.small {
+  text-align: center;
+  font-size: 14px
+}
+.small a {
+  color: #777
+}
+hr {
+  margin: 20px 0
+}
+#login {
+  width: 420px;
+  padding: 60px 60px 40px;
+  background: #fff;
+  text-align: center;
+  margin: 40px auto 20px;
+  overflow: hidden
+}
+#login .errorlist {
+  margin: 0;
+  padding: 10px 70px;
+  list-style: none;
+  background: #e66f2d;
+  margin: 20px -70px 20px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 13px
+}
+#login img {
+  opacity: .25
+}
+#login h1 {
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: #7c838c;
+  font-weight: normal
+}
+#login p {
+  color: #888
+}
+#login .btn {
+  font-size: 14px
+}
+#login form {
+  text-align: left;
+  padding: 0
+}
+#login form button {
+  float: right
+}
+input[type=text], input[type=password], textarea {
+  border: 0;
+  border: 2px solid #dddedf;
+  border-radius: 2px;
+  padding: .5em;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  transition: all .1s ease
+}
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+  outline: none;
+  border-color: #c3c5c6
+}
+textarea {
+  resize: none;
+  resize: vertical
 }

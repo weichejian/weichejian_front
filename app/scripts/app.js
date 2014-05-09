@@ -27,7 +27,7 @@ angular.module('weichejianFrontApp').constant('App', {
 ]).run([
   '$rootScope', '$state', 'Auth', function($rootScope, $state, Auth) {
     var statesNotRequireAuth;
-    statesNotRequireAuth = ['/', 'signin'];
+    statesNotRequireAuth = ['/', 'login'];
     return $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
       if (!Auth.isSignedIn() && !(_.contains(statesNotRequireAuth, toState.name))) {
         event.preventDefault();

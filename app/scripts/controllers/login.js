@@ -2,8 +2,8 @@
 'use strict';
 angular.module('weichejian.controllers').controller('LoginCtrl', [
   '$scope', 'Auth', function($scope, Auth) {
-    return $scope.signin = function() {
-      if ($scope.name.length === 0 || $scope.password.length === 0) {
+    return $scope.login = function() {
+      if ($scope.email.length === 0 || $scope.password.length === 0) {
         return;
       }
       return Auth.signIn($scope.name, $scope.password);

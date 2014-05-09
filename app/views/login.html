@@ -1,19 +1,21 @@
-<form class="form-horizontal" role="form" name="signinForm">
-  <div class="form-group">
-    <label for="usename" class="col-sm-2 control-label" translate="username"></label>
-    <div class="col-sm-3">
-      <input type="test" class="form-control" id="usename" placeholder="用户名" ng-model="name" required autofocus>
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="password" class="col-sm-2 control-label" translate="password"></label>
-    <div class="col-sm-3">
-      <input type="password" class="form-control" id="password" placeholder="密码" ng-model="password" required>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-3">
-      <button class="btn btn-default" type="submit"  ng-click="signin()" ng-disabled="signinForm.$invalid" translate="login"></button>
-    </div>
-  </div>
-</form>
+<div id="login" style="">
+  <a ui-sref='main'>
+    <img src="images/logo.png" height="72" width="72">
+  </a>
+    <h1 translate='login'></h1>
+    <hr>
+    <form action="." method="POST" name="loginForm">
+        <input type='hidden' name='csrfmiddlewaretoken' value='' />
+        <tr>
+          <th><label for="id_email" translate='username'></label></th>
+          <td><input id="id_email" maxlength="75" ng-model="email" placeholder="Email" type="text" /></td>
+        </tr>
+    <tr>
+      <th><label for="id_password" translate='password'></label></th>
+      <td><input id="id_password" ng-model="password" placeholder="Password" type="password" /></td>
+    </tr>
+    <button translate='login' class="btn btn-primary" ng-click="login()" ng-disabled="loginForm.$invalid"></button>
+        <a href="/reset" class="forgot" style="font-size:14px; padding:15px 0; color:#999; display:inline-block" translate='forgot'></a>
+    </form>
+</div>
+<p class="small"><a href="/register" translate='registerTips'></a></p>

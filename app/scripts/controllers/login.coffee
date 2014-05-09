@@ -5,7 +5,7 @@ angular.module('weichejian.controllers')
       '$scope'
       'Auth'
       ($scope, Auth) ->
-        $scope.signin = ->
-          return if $scope.name.length is 0 or $scope.password.length is 0
+        $scope.login = ->
+          return if $scope.email.length is 0 or $scope.password.length is 0
           Auth.signIn $scope.name, $scope.password
     ]

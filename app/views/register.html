@@ -1,0 +1,23 @@
+<div id="login">
+    <a ui-sref='main'>
+      <img src="images/logo.png" height="72" width="72">
+    </a>
+    <h1 translate='register'></h1>
+    <div>
+        <form name='registerForm'>
+            <!-- <input type='hidden' name='csrfmiddlewaretoken' value='GpfVAYNT0V2kB4TpWUgKoNiAK3LKZbz4' /> -->
+            <tr>
+              <th><label for="id_email" translate='username'></label></th>
+              <td><input id="id_email" ng-model="email" placeholder="Email" type="text" required autofocus /></td>
+            </tr>
+            <tr>
+              <th><label for="id_password" translate='password'></label></th>
+              <td><input id="id_password" ng-model="password" placeholder="Password" type="password" required /></td>
+            </tr>
+            <p>
+            <button translate='register' class="btn btn-primary" ng-click="register()" ng-disabled="registerForm.$invalid"></button>
+            </p>
+        </form>
+    </div>
+</div>
+<p class="small"><a ui-sref='login' translate='loginTips'></a></p>

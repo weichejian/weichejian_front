@@ -5,9 +5,11 @@
     <h1 translate='login'></h1>
     <hr>
     <form name="loginForm" role="form">
+        <!-- <input type='hidden' name='csrfmiddlewaretoken' value='GpfVAYNT0V2kB4TpWUgKoNiAK3LKZbz4' /> -->
+
         <tr>
           <th><label for="id_email" translate='username'></label></th>
-          <td><input id="id_email" maxlength="75" ng-model="email" placeholder="Email" type="text" required autofocus /></td>
+          <td><input id="id_email" ng-model="email" placeholder="Email" type="text" required autofocus /></td>
         </tr>
     <tr>
       <th><label for="id_password" translate='password'></label></th>
@@ -17,4 +19,4 @@
     <a href="/reset" class="forgot" style="font-size:14px; padding:15px 0; color:#999; display:inline-block" translate='forgot'></a>
     </form>
 </div>
-<p class="small"><a href="/register" translate='registerTips'></a></p>
+<p class="small"><a ui-sref='register' translate='registerTips'></a></p>

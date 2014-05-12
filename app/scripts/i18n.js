@@ -39,6 +39,7 @@ angular.module('weichejian.locales').config([
       password: '密码',
       forgot: '忘记密码？',
       registerTips: '还没有账号？注册一个',
+      loginTips: '已经有账号了? 马上登陆',
       prev: '&larr;上一页',
       next: '下一页&rarr;',
       something_loading: '正在加载...',

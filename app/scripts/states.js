@@ -11,6 +11,10 @@ angular.module('weichejian.states').config([
       url: '/login',
       templateUrl: 'views/login.html',
       controller: 'LoginCtrl'
+    }).state('register', {
+      url: '/register',
+      templateUrl: 'views/register.html',
+      controller: 'RegisterCtrl'
     }).state('main', {
       url: '/main',
       templateUrl: 'views/index.html',

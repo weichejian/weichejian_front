@@ -12,7 +12,7 @@ angular.module('weichejian.states')
       $stateProvider
         .state '/',
           url: '/'
-          templateUrl: 'views/main.html'
+          templateUrl: 'views/index.html'
           controller: 'MainCtrl'
 
         .state 'login',
@@ -22,7 +22,7 @@ angular.module('weichejian.states')
 
         .state 'main',
           url: '/main'
-          templateUrl: 'views/main.html'
+          templateUrl: 'views/index.html'
           controller: 'MainCtrl'
     ]
 

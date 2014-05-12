@@ -5,7 +5,7 @@ angular.module('weichejian.services').factory('Auth', [
     var service;
     service = {
       currentCSR: null,
-      signIn: function(name, password, token) {
+      login: function(name, password, token) {
         var params;
         params = {
           name: name

@@ -11,7 +11,7 @@ angular.module('weichejian.services')
         #factory
         service =
           currentCSR: null
-          signIn: (name, password, token)->
+          login: (name, password, token)->
             params =
               name: name
             if password?

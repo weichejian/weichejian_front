@@ -5,7 +5,7 @@ angular.module('weichejian.states').config([
     $urlRouterProvider.otherwise('/');
     return $stateProvider.state('/', {
       url: '/',
-      templateUrl: 'views/main.html',
+      templateUrl: 'views/index.html',
       controller: 'MainCtrl'
     }).state('login', {
       url: '/login',
@@ -13,7 +13,7 @@ angular.module('weichejian.states').config([
       controller: 'LoginCtrl'
     }).state('main', {
       url: '/main',
-      templateUrl: 'views/main.html',
+      templateUrl: 'views/index.html',
       controller: 'MainCtrl'
     });
   }

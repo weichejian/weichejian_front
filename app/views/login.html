@@ -4,18 +4,17 @@
   </a>
     <h1 translate='login'></h1>
     <hr>
-    <form action="." method="POST" name="loginForm">
-        <input type='hidden' name='csrfmiddlewaretoken' value='' />
+    <form name="loginForm" role="form">
         <tr>
           <th><label for="id_email" translate='username'></label></th>
-          <td><input id="id_email" maxlength="75" ng-model="email" placeholder="Email" type="text" /></td>
+          <td><input id="id_email" maxlength="75" ng-model="email" placeholder="Email" type="text" required autofocus /></td>
         </tr>
     <tr>
       <th><label for="id_password" translate='password'></label></th>
-      <td><input id="id_password" ng-model="password" placeholder="Password" type="password" /></td>
+      <td><input id="id_password" ng-model="password" placeholder="Password" type="password" required /></td>
     </tr>
     <button translate='login' class="btn btn-primary" ng-click="login()" ng-disabled="loginForm.$invalid"></button>
-        <a href="/reset" class="forgot" style="font-size:14px; padding:15px 0; color:#999; display:inline-block" translate='forgot'></a>
+    <a href="/reset" class="forgot" style="font-size:14px; padding:15px 0; color:#999; display:inline-block" translate='forgot'></a>
     </form>
 </div>
 <p class="small"><a href="/register" translate='registerTips'></a></p>

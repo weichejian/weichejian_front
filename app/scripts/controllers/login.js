@@ -6,7 +6,7 @@ angular.module('weichejian.controllers').controller('LoginCtrl', [
       if ($scope.email.length === 0 || $scope.password.length === 0) {
         return;
       }
-      return Auth.signIn($scope.name, $scope.password);
+      return Auth.login($scope.email, $scope.password);
     };
   }
 ]);

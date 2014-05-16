@@ -32,7 +32,7 @@ angular.module('weichejian.states')
 
         .state 'admin',
           url: '/admin'
-          templateUrl: 'views/index.html'
-          controller: 'MainCtrl'
+          templateUrl: 'views/admin/index.html'
+          controller: 'AdminCtrl'
     ]
 

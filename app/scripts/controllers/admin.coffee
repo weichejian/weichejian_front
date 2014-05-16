@@ -13,6 +13,9 @@ angular.module('weichejian.controllers')
         $scope.isLogin = Auth.isLogin
         $scope.menus = Config.adminMenus
         $scope.currentUser = StorageExt.user.get()
+        $scope.status =
+          isFirstOpen: true
+          isFirstDisabled: false
 
     ]
 

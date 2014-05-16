@@ -48,7 +48,7 @@ angular.module('weichejianFrontApp')
     ($rootScope, $state, Auth) ->
       statesNotRequireAuth = ['/', 'login', 'register']
       $rootScope.$on '$stateChangeStart', (event, toState, toParams, fromState, fromParams) ->
-        if !Auth.isSignedIn() and !(_.contains statesNotRequireAuth, toState.name)
+        if !Auth.isLogin() and !(_.contains statesNotRequireAuth, toState.name)
           event.preventDefault()
           $state.transitionTo '/'
   ])

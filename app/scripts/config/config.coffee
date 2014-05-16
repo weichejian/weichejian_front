@@ -83,7 +83,7 @@ angular.module('common.config', ['common.domain', 'common.env'])
 
         storageKey =
           unread: '___unread'
-          csr: '___csr'
+          user: '___user'
           lastdate: '___lastdate'
 
         #service

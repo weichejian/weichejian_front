@@ -1,31 +1,30 @@
-// Generated on 2014-04-10 using generator-angular 0.8.0
 'use strict';
 
-// # Globbing
-// for performance reasons we're only matching one level down:
-// 'test/spec/{,*/}*.js'
-// use this if you want to recursively match all subfolders:
-// 'test/spec/**/*.js'
+ # Globbing
+ # for performance reasons we're only matching one level down:
+ # 'test/spec/{,*/}*.js'
+ # use this if you want to recursively match all subfolders:
+ # 'test/spec/**/*.js'
 
-module.exports = function (grunt) {
+module.exports = (grunt) ->
 
-  // Load grunt tasks automatically
+  # Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
 
-  // Time how long tasks take. Can help when optimizing build times
+  # Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
 
-  // Define the configuration for all the tasks
+  # Define the configuration for all the tasks
   grunt.initConfig({
 
-    // Project settings
+    # Project settings
     yeoman: {
-      // configurable paths
+      # configurable paths
       app: require('./bower.json').appPath || 'app',
       dist: 'dist'
     },
 
-    // Watches files for changes and runs tasks based on the changed files
+    # Watches files for changes and runs tasks based on the changed files
     watch: {
       bower: {
         files: ['bower.json'],
@@ -61,11 +60,11 @@ module.exports = function (grunt) {
       }
     },
 
-    // The actual grunt server settings
+    # The actual grunt server settings
     connect: {
       options: {
         port: 9000,
-        // Change this to '0.0.0.0' to access the server from outside.
+        # Change this to '0.0.0.0' to access the server from outside.
         hostname: 'localhost',
         livereload: 35729
       },
@@ -95,7 +94,7 @@ module.exports = function (grunt) {
       }
     },
 
-    // Make sure code styles are up to par and there are no obvious mistakes
+    # Make sure code styles are up to par and there are no obvious mistakes
     jshint: {
       options: {
         jshintrc: '.jshintrc',
@@ -113,7 +112,7 @@ module.exports = function (grunt) {
       }
     },
 
-    // Empties folders to start fresh
+    # Empties folders to start fresh
     clean: {
       dist: {
         files: [{
@@ -128,7 +127,7 @@ module.exports = function (grunt) {
       server: '.tmp'
     },
 
-    // Add vendor prefixed styles
+    # Add vendor prefixed styles
     autoprefixer: {
       options: {
         browsers: ['last 1 version']
@@ -143,7 +142,7 @@ module.exports = function (grunt) {
       }
     },
 
-    // Automatically inject Bower components into the app
+    # Automatically inject Bower components into the app
     bowerInstall: {
       app: {
         src: ['<%= yeoman.app %>/index.html'],
@@ -151,7 +150,7 @@ module.exports = function (grunt) {
       }
     },
 
-    // Renames files for browser caching purposes
+    # Renames files for browser caching purposes
     rev: {
       dist: {
         files: {
@@ -165,9 +164,9 @@ module.exports = function (grunt) {
       }
     },
 
-    // Reads HTML for usemin blocks to enable smart builds that automatically
-    // concat, minify and revision files. Creates configurations in memory so
-    // additional tasks can operate on them
+    # Reads HTML for usemin blocks to enable smart builds that automatically
+    # concat, minify and revision files. Creates configurations in memory so
+    # additional tasks can operate on them
     useminPrepare: {
       html: '<%= yeoman.app %>/index.html',
       options: {
@@ -184,7 +183,7 @@ module.exports = function (grunt) {
       }
     },
 
-    // Performs rewrites based on rev and the useminPrepare configuration
+    # Performs rewrites based on rev and the useminPrepare configuration
     usemin: {
       html: ['<%= yeoman.dist %>/{,*/}*.html'],
       css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
@@ -193,7 +192,7 @@ module.exports = function (grunt) {
       }
     },
 
-    // The following *-min tasks produce minified files in the dist folder
+    # The following *-min tasks produce minified files in the dist folder
     cssmin: {
       options: {
         root: '<%= yeoman.app %>'
@@ -239,9 +238,9 @@ module.exports = function (grunt) {
       }
     },
 
-    // ngmin tries to make the code safe for minification automatically by
-    // using the Angular long form for dependency injection. It doesn't work on
-    // things like resolve or inject so those have to be done manually.
+    # ngmin tries to make the code safe for minification automatically by
+    # using the Angular long form for dependency injection. It doesn't work on
+    # things like resolve or inject so those have to be done manually.
     ngmin: {
       dist: {
         files: [{
@@ -253,14 +252,14 @@ module.exports = function (grunt) {
       }
     },
 
-    // Replace Google CDN references
+    # Replace Google CDN references
     cdnify: {
       dist: {
         html: ['<%= yeoman.dist %>/*.html']
       }
     },
 
-    // Copies remaining files to places other tasks can use
+    # Copies remaining files to places other tasks can use
     copy: {
       dist: {
         files: [{
@@ -291,7 +290,7 @@ module.exports = function (grunt) {
       }
     },
 
-    // Run some tasks in parallel to speed up the build process
+    # Run some tasks in parallel to speed up the build process
     concurrent: {
       server: [
         'copy:styles'
@@ -306,33 +305,33 @@ module.exports = function (grunt) {
       ]
     },
 
-    // By default, your `index.html`'s <!-- Usemin block --> will take care of
-    // minification. These next options are pre-configured if you do not wish
-    // to use the Usemin blocks.
-    // cssmin: {
-    //   dist: {
-    //     files: {
-    //       '<%= yeoman.dist %>/styles/main.css': [
-    //         '.tmp/styles/{,*/}*.css',
-    //         '<%= yeoman.app %>/styles/{,*/}*.css'
-    //       ]
-    //     }
-    //   }
-    // },
-    // uglify: {
-    //   dist: {
-    //     files: {
-    //       '<%= yeoman.dist %>/scripts/scripts.js': [
-    //         '<%= yeoman.dist %>/scripts/scripts.js'
-    //       ]
-    //     }
-    //   }
-    // },
-    // concat: {
-    //   dist: {}
-    // },
+    # By default, your `index.html`'s <!-- Usemin block --> will take care of
+    # minification. These next options are pre-configured if you do not wish
+    # to use the Usemin blocks.
+    # cssmin: {
+    #   dist: {
+    #     files: {
+    #       '<%= yeoman.dist %>/styles/main.css': [
+    #         '.tmp/styles/{,*/}*.css',
+    #         '<%= yeoman.app %>/styles/{,*/}*.css'
+    #       ]
+    #     }
+    #   }
+    # },
+    # uglify: {
+    #   dist: {
+    #     files: {
+    #       '<%= yeoman.dist %>/scripts/scripts.js': [
+    #         '<%= yeoman.dist %>/scripts/scripts.js'
+    #       ]
+    #     }
+    #   }
+    # },
+    # concat: {
+    #   dist: {}
+    # },
 
-    // Test settings
+    # Test settings
     karma: {
       unit: {
         configFile: 'karma.conf.js',
@@ -342,25 +341,22 @@ module.exports = function (grunt) {
   });
 
 
-  grunt.registerTask('serve', function (target) {
-    if (target === 'dist') {
-      return grunt.task.run(['build', 'connect:dist:keepalive']);
-    }
+  grunt.registerTask 'serve', (target) ->
+    if target is 'dist'
+      return grunt.task.run(['build', 'connect:dist:keepalive'])
 
-    grunt.task.run([
-      'clean:server',
-      'bowerInstall',
-      'concurrent:server',
-      'autoprefixer',
-      'connect:livereload',
+    grunt.task.run [
+      'clean:server'
+      'bowerInstall'
+      'concurrent:server'
+      'autoprefixer'
+      'connect:livereload'
       'watch'
-    ]);
-  });
+    ]
 
-  grunt.registerTask('server', function (target) {
+  grunt.registerTask 'server', (target) ->
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
     grunt.task.run(['serve:' + target]);
-  });
 
   grunt.registerTask('test', [
     'clean:server',
@@ -392,4 +388,4 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
-};
+

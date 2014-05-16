@@ -29,5 +29,10 @@ angular.module('weichejian.states')
           url: '/main'
           templateUrl: 'views/index.html'
           controller: 'MainCtrl'
+
+        .state 'admin',
+          url: '/admin'
+          templateUrl: 'views/index.html'
+          controller: 'MainCtrl'
     ]
 

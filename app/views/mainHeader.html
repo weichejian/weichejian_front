@@ -8,11 +8,11 @@
         <li><a href="http://blog.sendtoinc.com/" translate='about'></a>
         <li class="sep"></li>
 
-        <!-- <li><a href="/admin">daemon</a></li> -->
+        <li ng-if="isLogin()"><a ui-sref="admin" ng-bind="currentUser[0].username"></a></li>
 
 
-        <li><a ui-sref='login' translate='login'></a></li>
-        <li class="signup"><a href="/register" class="btn signup-link" translate='register'></a></li>
+        <li ng-if='!isLogin()'><a ui-sref='login' translate='login'></a></li>
+        <li ng-if='!isLogin()' class="signup"><a ui-sref="register" class="btn signup-link" translate='register'></a></li>
 
 
     </ul>

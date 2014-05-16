@@ -12,11 +12,11 @@ angular.module('weichejian.services')
           locals = Storage.get(Config.storageKey.lastdate) ? {}
           locals[id] = datetime
           Storage.set Config.storageKey.lastdate, locals
-      csr:
+      user:
         get: ->
-          Storage.get Config.storageKey.csr
+          Storage.get Config.storageKey.user
         set: (data) ->
-          Storage.set Config.storageKey.csr, data
+          Storage.set Config.storageKey.user, data
 
       unread:
         getById: (id) ->

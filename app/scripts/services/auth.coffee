@@ -17,7 +17,7 @@ angular.module('weichejian.services')
           login: (name, password, token)->
             deferred = $q.defer()
             deferred.resolve [
-              username: "daemon"
+              username: name
               desc: "。。。。。。"
               avatar: "http://mmbiz.qpic.cn/mmbiz/LibiaVTSibfW4HFHpEJnk8E8J11V4tRs9IedpMAQ3ibj9JuqtH3L8NncZyzXrT4f3icrlyFu8OfGrTqKON6O27TCvqw/0"
               url: "http://mp.weixin.qq.com/s?__biz=MjM5NDA0NTM2MQ==&mid=200013272&idx=1&sn=a8d933d846bc11fbfd09327a708f32d5"
@@ -36,7 +36,7 @@ angular.module('weichejian.services')
             #     $log.debug username, activities, ' ->activities'
             #     activities
 
-          signOut: ->
+          logOut: ->
             # if $window.confirm($translate 'signout_tips')
             #   # Socket.emit 'logout', ''
             #   StorageExt.csr.set null
@@ -44,7 +44,7 @@ angular.module('weichejian.services')
             #   service.currentUser = null
             #   $state.transitionTo 'signin'
 
-          isSignedIn: ->
+          isLogin: ->
             !!service.currentUser
 
           getToken: ->
@@ -53,7 +53,7 @@ angular.module('weichejian.services')
           authed: (data) ->
             $log.debug data, ' ->authed'
             data.avatar = data.avatar ? 'images/avatar.png'
-            StorageExt.csr.set data
+            StorageExt.user.set data
             service.currentUser = data
             $state.transitionTo 'main'
 

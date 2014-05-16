@@ -1,14 +1,15 @@
 #Guide
 
+
 ##install app
 
 `git clone git@github.com:weichejian/weichejian_front.git`
 
 `cd weichejian_front`
 
-##install yeoman grunt bower
+##install dependences with npm
 
-`npm install -g yo grunt-cli bower`
+`npm install `
 
 ##install  dependences with bower
 

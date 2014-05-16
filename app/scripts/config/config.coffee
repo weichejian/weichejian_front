@@ -86,6 +86,48 @@ angular.module('common.config', ['common.domain', 'common.env'])
           user: '___user'
           lastdate: '___lastdate'
 
+        adminMenus = [
+          title: "账号设置"
+          action: "#"
+          icon: "fa-dashboard"
+          menus: [
+            title: "微信公众 账号"
+            action: "stuff"
+          ,
+            title: "修改密码"
+            action: "moreStuff"
+          ,
+            title: "修改个人信息"
+            action: "moreStuff"
+          ,
+            title: "查看权限"
+            action: "moreStuff"
+
+          ]
+        ,
+          title: "基础模块"
+          action: "#"
+          icon: "fa-gears"
+          menus: [
+            title: "被添加自动回复"
+            action: "awesomeStuff"
+          ,
+            title: "关键字回复"
+            action: "awesomeStuff"
+          ]
+        ,
+          title: "微网站"
+          action: "#"
+          icon: "fa-sitemap"
+          menus: [
+            title: "基本设置"
+            action: "awesomeStuff"
+          ,
+            title: "关键字回复"
+            action: "awesomeStuff"
+          ]
+        ]
+
         #service
         @service = service
         @defaults = defaults
@@ -94,5 +136,6 @@ angular.module('common.config', ['common.domain', 'common.env'])
         @customerStatusMap = customerStatusMap
         @customerlevelsMap = customerlevelsMap
         @csrStatusMap = csrStatusMap
+        @adminMenus = adminMenus
         return
     ]

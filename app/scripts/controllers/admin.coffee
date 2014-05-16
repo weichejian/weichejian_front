@@ -11,7 +11,7 @@ angular.module('weichejian.controllers')
         $scope.logOut = Auth.logOut
         $scope.isLogin = Auth.isLogin
         $scope.$watch ->
-          Auth.currentUser
+          StorageExt.user.get()
         , (value) ->
           $scope.currentUser = value
     ]
